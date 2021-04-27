@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ * {
+      box-sizing: border-box;
+    }
+    
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px; 
+    }
+    
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    </style>
+</head>
+<body>
+    <form action ="{{ url_for('addperson')}}" method = "POST">
+        <div class="row">
+            <div class="column" style="background-color:rgb(17, 171, 243);">
+        <h3>Skier Information</h3>
+            </div>
+        
+        
+            <div class="column" style="background-color:rgb(17, 171, 243);">
+        <h3> Name </h3>
+        <input type="text" name="nm"/><br>
+</div>  <div class="column" style="background-color:rgb(17, 171, 243);">
+        <h3>Email Address</h3>
+        
+        
+        <input type="text" name="emadd"/></div>
+</div>
+<div class="column" style="background-color:#aaa;">
+        <input type="submit" value="proceed"/>
+        </div>
+        <div class="column" style="background-color:#aaa;"></div>
+            <div class="column" style="background-color:#aaa;">
+            </div>
+    </form>
+
+</body>
+</html>
